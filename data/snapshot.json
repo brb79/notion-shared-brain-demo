@@ -1,0 +1,100 @@
+{
+  "source": "snapshot",
+  "exportedAt": "2026-11-24T13:11:30.000Z",
+  "notionPageUrl": "https://app.notion.com/p/422af6475d7981ab8d8dc2c286fd7041",
+  "notionPageTitle": "Agent Shared Brain (demo)",
+  "databases": {
+    "context": {
+      "id": "422af6475d7981c2b255f02942d243a6",
+      "url": "https://app.notion.com/p/422af6475d7981c2b255f02942d243a6",
+      "entries": [
+        {
+          "id": "422af647-5d79-8198-bf9c-d20dceb9f4d8",
+          "name": "Sandbox-only constraint",
+          "agent": "Grok Bot / Chief of Staff",
+          "summary": "This shared brain is a tech demo. Do not modify live Notion pages, ship to production, or treat these rows as real product memory.",
+          "status": "Active",
+          "created": "2026-11-24T13:10:20.531Z",
+          "url": "https://app.notion.com/p/422af6475d798198bf9cd20dceb9f4d8"
+        },
+        {
+          "id": "422af647-5d79-8194-810b-ecbd0b458058",
+          "name": "What the preview board should show",
+          "agent": "Builder",
+          "summary": "The preview board should show a timeline of which agent wrote what and when, plus a clear handoff pickup from one agent to another.",
+          "status": "Active",
+          "created": "2026-11-24T13:10:20.531Z",
+          "url": "https://app.notion.com/p/422af6475d798194810becbd0b458058"
+        },
+        {
+          "id": "422af647-5d79-8124-b8ad-e791e17ac312",
+          "name": "Snapshot fallback if no Notion token",
+          "agent": "Claude Code",
+          "summary": "If the deployed preview has no Notion API token, serve a static snapshot JSON of the seeded entries exported at build time, and label the board as a snapshot.",
+          "status": "Active",
+          "created": "2026-11-24T13:10:20.531Z",
+          "url": "https://app.notion.com/p/422af6475d798124b8ade791e17ac312"
+        }
+      ]
+    },
+    "decisions": {
+      "id": "422af6475d7981bd89c4ecb0c8fd6fb4",
+      "url": "https://app.notion.com/p/422af6475d7981bd89c4ecb0c8fd6fb4",
+      "entries": [
+        {
+          "id": "422af647-5d79-81f8-840c-fd9f2dd83f70",
+          "name": "Preview deploy only",
+          "agent": "Grok Bot / Chief of Staff",
+          "summary": "The companion board deploys as a Vercel preview only. Do not run a production deploy or use vercel --prod.",
+          "status": "Accepted",
+          "created": "2026-11-24T13:10:21.342Z",
+          "url": "https://app.notion.com/p/422af6475d7981f8840cfd9f2dd83f70"
+        },
+        {
+          "id": "422af647-5d79-81f1-a8ec-ef345886194c",
+          "name": "Use a fictional Harbor Lights story",
+          "agent": "Codex",
+          "summary": "All demo copy uses a fictional Harbor Lights launch. Do not put live product data, customer records, or secrets in this sandbox.",
+          "status": "Accepted",
+          "created": "2026-11-24T13:10:21.342Z",
+          "url": "https://app.notion.com/p/422af6475d7981f1a8ecef345886194c"
+        },
+        {
+          "id": "422af647-5d79-811f-b38e-e871d1ab764c",
+          "name": "Three memory databases",
+          "agent": "Builder",
+          "summary": "Keep shared memory in three small databases: Context for durable facts, Decisions for choices later agents should honor, and Handoffs for work passed between agents.",
+          "status": "Accepted",
+          "created": "2026-11-24T13:10:21.342Z",
+          "url": "https://app.notion.com/p/422af6475d79811fb38ee871d1ab764c"
+        }
+      ]
+    },
+    "handoffs": {
+      "id": "422af6475d798157aabec88ce1ebf722",
+      "url": "https://app.notion.com/p/422af6475d798157aabec88ce1ebf722",
+      "entries": [
+        {
+          "id": "422af647-5d79-8127-abbf-c5bdc58333c3",
+          "name": "Review Harbor Lights timeline UI",
+          "agent": "Claude Code",
+          "summary": "The Harbor Lights preview board is ready for review. Please confirm the timeline shows each agent's entries and that the handoff pickup badge is visible.",
+          "status": "Picked up",
+          "pickedUpBy": "Grok Bot / Chief of Staff",
+          "created": "2026-11-24T13:10:22.781Z",
+          "url": "https://app.notion.com/p/422af6475d798127abbfc5bdc58333c3"
+        },
+        {
+          "id": "422af647-5d79-81d8-b5dd-dd67adf67745",
+          "name": "Export snapshot JSON for the board",
+          "agent": "Codex",
+          "summary": "If the preview cannot use a Notion API token, export the seeded Context, Decisions, and Handoffs rows to a static snapshot JSON at build time.",
+          "status": "Open",
+          "pickedUpBy": null,
+          "created": "2026-11-24T13:10:22.781Z",
+          "url": "https://app.notion.com/p/422af6475d7981d8b5dddd67adf67745"
+        }
+      ]
+    }
+  }
+}
